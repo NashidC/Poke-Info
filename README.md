@@ -1,6 +1,6 @@
 # Poké-Info
 
-## An encyclopedia of various Pokémon (Generation 1 - 8) in the world API Web Based Application
+## An encyclopedia of various Pokémon (Generation 1 - 4) in the world API Web Based Application
 
 \*Title banner goes here\*
 
@@ -22,9 +22,10 @@ https://pokeapi.co/
 
 ### React
 - This web application will be built using React app
-- 12 separate components 
+- 12 separate functional components rendering their specific content
 - React Router will allow user to switch from one component to the next
-- 
+- Axios will be utilize to extract data from third party API, PokéAPI, render into the DOM.
+
 
 ### Styling
 - Poké-info application will be developed using CSS flexbox layout and React
