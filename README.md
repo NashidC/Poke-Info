@@ -27,6 +27,7 @@ https://pokeapi.co/
 - React Hooks implementation
 - Axios will be utilize to extract data from third party API, PokéAPI, render into the DOM.
 - The PokéAPI will not require an API KEY.
+- npm start or yarn start to run Poké-Info web application
 
 
 ### Styling
