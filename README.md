@@ -1,6 +1,6 @@
 # Poké-Info
 
-## A web based API application that services as n encyclopedia of various Pokémon (Generation 1 - 4). 
+## A web based API application that services as n encyclopedia of various Pokémon (Generations 1 - 4). 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"/>
 
 ## Description
