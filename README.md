@@ -32,7 +32,7 @@ https://pokeapi.co/api/v2/pokemon/ {id or name}<br>
 - [x] type
 - [x] height(m) + weight (kg) 
 - [x] different moves 
-- [x] sprite image/icon 
+- [x] sprite (image/icon)  
 - [x] stats --HP, Attack, Defense
 
 https://pokeapi.co/api/v2/type/ {id or name}<br>
@@ -52,6 +52,8 @@ https://pokeapi.co/api/v2/evolution-chain/ {id} <br>
 
 ## Post MVP Goal
 
+Once we have completed our main goal features, the one thing we would want to build out is a map to show where you can encounter each pokemon for each game version. 
+We can utilize the PokeAPI endpoint for encounters ( https://pokeapi.co/api/v2/pokemon/{id}/encounters ) and create a map and chart display 
 
 ### React
 - This web application will be built using React app
