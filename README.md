@@ -24,8 +24,11 @@ https://pokeapi.co/
 - This web application will be built using React app
 - 12 separate functional components rendering their specific content
 - React Router will allow user to switch from one component to the next
+- React Hooks implementation
 - Axios will be utilize to extract data from third party API, PokéAPI, render into the DOM.
+- The PokéAPI will not require an API KEY.
 
 
 ### Styling
-- Poké-info application will be developed using CSS flexbox layout and React
+- Poké-info application will be developed using CSS flexbox layout to uniquely align and distribute elements on the web app page. 
+- Responsive design will be implemented by utlizing media queries for all 3 screen sizes compatibility: desktop, tablet, and mobile. 
