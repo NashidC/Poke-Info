@@ -88,5 +88,6 @@ We’re so excited to present Poké-Info, an easy to use web app which allows us
 If you require any further information, feel free to contact us at:
 
 Nashid Chowdhury - [LinkedIn](https://www.linkedin.com/in/nashidc/) | [Gmail](nash.chowdhury@gmail.com)
+
 David Espinal - [LinkedIn](https://www.linkedin.com/in/david-espinal-28b91a1b7/) | [Gmail](despinal0425@gmail.com)
 
