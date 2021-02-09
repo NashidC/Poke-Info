@@ -7,8 +7,7 @@
 
 Poké-Info is a web application which allow users to have access to search and check detailed stats for every creature, including their favorite Pokémon species, in the Pokémon realm. Users will be allow to choose a Pokémon of interest based on generation or through search. With this they can  gain information in the following criteria: Pokémon name, number, evolution stages, type, and stats for HP, Attack, and Defense. Also included is what pokemon types they are weakest and strongest to.  The Pokémon information will be presented with a unique look inpired by the Pokémon card and its anatomy. This web application will be responsive which will be compatible for all screen sizes. 
 
-## Component Hierarchy
-<img src=Component_Hierarchy.png/>
+
 
 ## User Interfaces
 
@@ -17,6 +16,9 @@ Home<br>
 
 Bulbasaur Card<br>
 <img src=Bulbasaur.png/>
+
+## Component Hierarchy
+<img src=Component_Hierarchy.png/>
 
 ## API Used
 
