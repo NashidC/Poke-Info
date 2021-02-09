@@ -20,7 +20,7 @@ Bulbasaur Card<br>
 
 ## API Used
 
-### PokéAPI + MVP Goal
+### PokéAPI + MVP Requirements
 
 https://pokeapi.co/
 
@@ -48,7 +48,8 @@ https://pokeapi.co/api/v2/evolution-chain/ {id} <br>
 - [x] evolution chain from 1st to 3rd stages
 
 
-## Requirements
+## Post MVP Goal
+
 
 ### React
 - This web application will be built using React app
