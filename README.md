@@ -39,3 +39,7 @@ https://pokeapi.co/
 
 ### Start Web App
 - `npm start` or `yarn start` to run Poké-Info web application
+
+## Inspiration
+
+## Contact
