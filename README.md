@@ -82,5 +82,6 @@ We can utilize the PokeAPI endpoint for encounters ( https://pokeapi.co/api/v2/p
 - `npm start` or `yarn start` to run Poké-Info web application
 
 ## Inspiration
+We’re so excited to present Poké-Info, an easy to use web app which allows users to access information on their favorite Pokémon. As fans of the franchise, our inspiration came from our childhood memory of playing Pokémon cards (1st Gen) and games (red, blue, & yellow version). We wanted to create an application where users of all ages can have fun learning more about their favorite Pokémon and where to ‘catch em all’.
 
 ## Contact
