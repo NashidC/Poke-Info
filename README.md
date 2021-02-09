@@ -12,10 +12,10 @@ Poké-Info is a web application which allow users to have access to search and c
 
 ## User Interfaces
 
-Home
+Home<br>
 <img src=Home.png/>
 
-Bulbasaur Card
+Bulbasaur Card<br>
 <img src=Bulbasaur.png/>
 
 ## API Used
