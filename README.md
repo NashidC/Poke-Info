@@ -42,10 +42,10 @@ https://pokeapi.co/api/v2/type/ {id or name}<br>
 - [x] No Damage To 
 
 https://pokeapi.co/api/v2/move {id or name} <br>
--[x] effect of move 
+- [x] effect of move 
 
 https://pokeapi.co/api/v2/evolution-chain/ {id} <br> 
--[x] evolution chain from 1st to 3rd stages
+- [x] evolution chain from 1st to 3rd stages
 
 
 ## Requirements
