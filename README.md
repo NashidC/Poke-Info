@@ -24,7 +24,29 @@ Bulbasaur Card<br>
 
 https://pokeapi.co/
 
-- Endpoints used: Pokémon, /*Must include the endpoints we'll use*/
+- Endpoints used: <br>
+https://pokeapi.co/api/v2/pokemon/ {id or name}<br>
+- Data Retrieved: 
+- [x] type
+- [x] height(m) + weight (kg) 
+- [x] different moves 
+- [x] sprite image/icon 
+- [x] stats --HP, Attack, Defense
+
+https://pokeapi.co/api/v2/type/ {id or name}<br>
+
+- Data Retrieved: 
+- [x] Double Damage From
+- [x] Double Damage To 
+- [x] Half Damage From 
+- [x] Half Damage To
+- [x] No Damage From
+- [x] No Damage To 
+
+
+
+
+
 
 ## Requirements
 
