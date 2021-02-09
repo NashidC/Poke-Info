@@ -30,6 +30,7 @@ https://pokeapi.co/
 - 12 separate functional components rendering their specific content
 - React Router will allow user to switch from one component to the next
 - React Hooks implementation
+- There's a chance redux might be apply into the web app
 - Axios will be utilize to extract data from third party API, PokéAPI, render into the DOM.
 - The PokéAPI will not require an API KEY.
 - npm start or yarn start to run Poké-Info web application
