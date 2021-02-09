@@ -20,13 +20,13 @@ Bulbasaur Card<br>
 
 ## API Used
 
-### PokéAPI 
+### PokéAPI + MVP Goal
 
 https://pokeapi.co/
 
-- Endpoints used: <br>
+Endpoints used: <br>
+
 https://pokeapi.co/api/v2/pokemon/ {id or name}<br>
-- Data Retrieved: 
 - [x] type
 - [x] height(m) + weight (kg) 
 - [x] different moves 
@@ -34,8 +34,6 @@ https://pokeapi.co/api/v2/pokemon/ {id or name}<br>
 - [x] stats --HP, Attack, Defense
 
 https://pokeapi.co/api/v2/type/ {id or name}<br>
-
-- Data Retrieved: 
 - [x] Double Damage From
 - [x] Double Damage To 
 - [x] Half Damage From 
@@ -43,9 +41,11 @@ https://pokeapi.co/api/v2/type/ {id or name}<br>
 - [x] No Damage From
 - [x] No Damage To 
 
+https://pokeapi.co/api/v2/move {id or name} <br>
+-[x] effect of move 
 
-
-
+https://pokeapi.co/api/v2/evolution-chain/ {id} <br> 
+-[x] evolution chain from 1st to 3rd stages
 
 
 ## Requirements
