@@ -33,9 +33,10 @@ https://pokeapi.co/
 - There's a chance redux might be apply into the web app
 - Axios will be utilize to extract data from third party API, PokéAPI, render into the DOM
 - The PokéAPI will not require an API KEY
-- `npm start` or `yarn start` to run Poké-Info web application
-
 
 ### Styling
 - Poké-info application will be developed using CSS flexbox layout to uniquely align and distribute elements on the web app page
 - Responsive design will be implemented by utlizing media queries for all 3 screen sizes compatibility: desktop, tablet, and mobile
+
+### Start Web App
+- `npm start` or `yarn start` to run Poké-Info web application
