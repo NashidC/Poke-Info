@@ -4,7 +4,12 @@ function Search() {
 
 
   return (
-    <h2>Search Bar</h2>
+    <div className="flex-two">
+    <input
+      type="Search"
+      placeholder="Search"
+      />
+  </div>
   )
 }
 
