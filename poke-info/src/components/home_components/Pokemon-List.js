@@ -1,9 +1,12 @@
+import getByName from '../../services/getByName';
+
 
 
 function PokemonList(props) {
 
   const pokemons = props.apiData
-  
+
+ 
 
 
 
@@ -15,8 +18,16 @@ function PokemonList(props) {
       <div>
         <ul>
           {
-            pokemons.map((pokemon) => {
-              return <li>{pokemon.name}</li>
+            pokemons.map((pokemon) => { 
+              
+              const response = async () => { 
+                const data = await getByName(pokemon.name)
+                console.log(data);
+              }
+              response();
+
+              console.log(pokemon)
+              return <li key={pokemon.name}><img url="" />{pokemon.name}</li>
             })
           }
         </ul>
