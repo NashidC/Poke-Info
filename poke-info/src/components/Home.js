@@ -15,7 +15,6 @@ function Home() {
   useEffect(() => {
     const response = async () => { 
       const data = await getPokemons();
-      console.log(data.results);
       setPokemonList(data.results);
     }
 

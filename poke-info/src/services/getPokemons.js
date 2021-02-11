@@ -9,7 +9,6 @@ async function getPokemons() {
     return data;
   });
 
-  console.log(data);
   return data;
 }
 

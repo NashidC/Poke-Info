@@ -1,14 +1,10 @@
-import getByName from '../../services/getByName';
+// import getByName from '../../services/getByName';
 
-
+import Image from './Image'
 
 function PokemonList(props) {
 
   const pokemons = props.apiData
-
- 
-
-
 
 
 
@@ -18,16 +14,8 @@ function PokemonList(props) {
       <div>
         <ul>
           {
-            pokemons.map((pokemon) => { 
-              
-              const response = async () => { 
-                const data = await getByName(pokemon.name)
-                console.log(data);
-              }
-              response();
-
-              console.log(pokemon)
-              return <li key={pokemon.name}><img url="" />{pokemon.name}</li>
+            pokemons.map((pokemon, index) => { 
+              return <li key={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
             })
           }
         </ul>
@@ -44,3 +32,8 @@ function PokemonList(props) {
 
 
 export default PokemonList;
+
+
+
+
+
