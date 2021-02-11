@@ -4,12 +4,9 @@ import Image from './Image'
 
 function PokemonList(props) {
 
-  const pokemons = props.apiData
-
-
-
-
-  if (pokemons !== null) {
+  
+  const pokemons = props.apiData.results
+  
     return (
       <div>
         <ul>
@@ -21,13 +18,6 @@ function PokemonList(props) {
         </ul>
       </div>
     )
-  } else { 
-    return (
-      <div>
-
-      </div>
-    )
-  }
 }
 
 

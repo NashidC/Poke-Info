@@ -15,7 +15,7 @@ const [pokemonName, setPokemonName] = useState([]);
 const getPokemonByName = async () => {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.imageName}`);
 
-  console.log(response.data.sprites.front_default);
+  // console.log(response.data.sprites.front_default);
   setPokemonName(response.data.sprites.front_default);
 }
 
