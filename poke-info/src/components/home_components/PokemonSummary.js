@@ -31,21 +31,23 @@ function PokemonSummary(props) {
 
 
   let list;
+  let button;
   let buttonTwo;
- 
-    if (pokemons !== null && nextPokemonList === false) {
+  
+  if (pokemons !== null && nextPokemonList === false) {
+      button =  <button onClick={showNextList}>Next</button>
       list = <PokemonList apiData={pokemons} />
-    }
+  } else if (pokemons !== null && nextPokemonList === true) {
     
-    else if (pokemons !== null && nextPokemonList === true) {
       list = <PokemonListTwo apiDataTwo={`https://pokeapi.co/api/v2/pokemon-species/?offset=${next}&limit=20`} />
 
+      if (next < 880) {
+        button = <button onClick={showNextList}>Next</button>
+      }
       buttonTwo =  <button onClick={showPrevList}>Prev</button>
       
       console.log(next);
-    }
-    
-    else {
+    } else {
       list = <h2>There is no data</h2>
     }
 
@@ -58,7 +60,7 @@ function PokemonSummary(props) {
     return (
       <div>
         {buttonTwo}
-        <button onClick={showNextList}>Next</button>
+        {button}
         {list}
       </div>
     )
