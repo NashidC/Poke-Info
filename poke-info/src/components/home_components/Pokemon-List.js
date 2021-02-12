@@ -1,4 +1,4 @@
-// import getByName from '../../services/getByName';
+
 
 import Image from './Image'
 

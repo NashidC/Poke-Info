@@ -1,13 +1,12 @@
-import PokemonList from "./Pokemon-List"
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-
+import NextList from './NextList';
 
 function PokemonListTwo(props) { 
 
   const [nextList, setNextList] = useState(null);
 
-  console.log(nextList);
+
   let list = props.apiDataTwo
 
   const fetchNextList= async () => {
@@ -16,15 +15,33 @@ function PokemonListTwo(props) {
   }
 
   useEffect(() => {
-    fetchNextList();
+    
+  const timeoutId = setTimeout(() => {
+    if (list) {
+      fetchNextList();
+    }
+  }, 300)
+  //  perhaps a return will allow the cleanup
+    return () => { 
+      clearTimeout(timeoutId);
+    }
+    
+    
   }, [list])
 
 
- 
 
-  return (
-    <h1>Next list</h1>
-  )
+  
+
+  if (nextList !== null) {
+    return (
+      <NextList nextPokemons={nextList.results} />
+    )
+  } else { 
+    return (
+      <div></div>
+    )
+  }
 }
 
 
