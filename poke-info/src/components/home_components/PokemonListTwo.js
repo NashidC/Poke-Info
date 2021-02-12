@@ -20,7 +20,7 @@ function PokemonListTwo(props) {
     if (list) {
       fetchNextList();
     }
-  }, 300)
+  }, 200)
   //  perhaps a return will allow the cleanup
     return () => { 
       clearTimeout(timeoutId);
