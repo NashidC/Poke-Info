@@ -1,17 +1,15 @@
-import Evolution from './Evolution';
-import TypeEffect from './Type-Effect';
 
 
 
 
-function CardInfo() { 
+function CardInfo(props) { 
 
+  console.log(props.pokemonName);
 
   return (
     <div>
       <h2>Card Info</h2>
-      <Evolution />
-      <TypeEffect />
+
     </div>
   )
 }

@@ -13,6 +13,8 @@ function PokemonSummary(props) {
   const [next, setNext] = useState(0)
   const [nextPokemonList, setNextPokemonList] = useState(false);
   const [nextList, setNextList] = useState(null);
+  const [cardInfo, setCardInfo] = useState(false);
+  const [pokemonName, setPokemonName] = useState("");
 
   let url = `https://pokeapi.co/api/v2/pokemon-species/?offset=${next}&limit=20`;
 
@@ -49,6 +51,16 @@ function PokemonSummary(props) {
     }
   }
 
+
+  function goToCardInfo(e) { 
+      setPokemonName(e.target.id);
+      setCardInfo(true);
+  }
+
+  function back() { 
+    setCardInfo(false);
+  }
+
   let list;
   let button;
   let buttonTwo;
@@ -57,9 +69,9 @@ function PokemonSummary(props) {
       button = <button onClick={showNextList}>Next</button>
       const pokemonsList = pokemons.results
 
-    list = <ul>{pokemonsList.map((pokemon, id) => { 
+    list = <ul>{pokemonsList.map((pokemon) => { 
       return (
-        <li onClick={(e) => console.log(e)} key={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
+        <li onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
       )
     })}</ul>
   }  
@@ -68,7 +80,7 @@ function PokemonSummary(props) {
 
     list = <ul>{pokemonNextList.map(pokemon => { 
       return (
-        <li onClick={(e) => console.log(e)} key={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
+        <li onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
       )
     })}</ul>
     
@@ -83,6 +95,7 @@ function PokemonSummary(props) {
   }
 
 
+  if (!cardInfo) {
     return (
       <div>
         <Search />
@@ -91,6 +104,14 @@ function PokemonSummary(props) {
         {list}
       </div>
     )
+  } else { 
+    return (
+      <div>
+        <button onClick={ () => back() }>Back</button>
+        <CardInfo pokemonName={pokemonName} />
+      </div>
+    )
+  }
     
 }
 
