@@ -1,7 +1,8 @@
-import PokemonList from './Pokemon-List';
-import PokemonListTwo from './PokemonListTwo'
+import Image from './Image';
+import Search from './Search';
+import CardInfo from './Card-Info';
 import React, { useState, useEffect } from "react";
-
+import axios from 'axios';
 
 
 
@@ -11,6 +12,27 @@ function PokemonSummary(props) {
 
   const [next, setNext] = useState(0)
   const [nextPokemonList, setNextPokemonList] = useState(false);
+  const [nextList, setNextList] = useState(null);
+
+  let url = `https://pokeapi.co/api/v2/pokemon-species/?offset=${next}&limit=20`;
+
+
+  const fetchNextList= async () => {
+    const res = await axios.get(url);
+    setNextList(res.data);
+  }
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (next) {
+        fetchNextList();
+      }
+    }, 300)
+    //return will allow the cleanup
+    return () => {
+      clearTimeout(timeoutId);
+    }
+  }, [next]);
   
   
   function showNextList() { 
@@ -27,38 +49,43 @@ function PokemonSummary(props) {
     }
   }
 
- 
-
-
   let list;
   let button;
   let buttonTwo;
   
   if (pokemons !== null && nextPokemonList === false) {
-      button =  <button onClick={showNextList}>Next</button>
-      list = <PokemonList apiData={pokemons} />
-  } else if (pokemons !== null && nextPokemonList === true) {
+      button = <button onClick={showNextList}>Next</button>
+      const pokemonsList = pokemons.results
+
+    list = <ul>{pokemonsList.map((pokemon, id) => { 
+      return (
+        <li onClick={(e) => console.log(e)} key={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
+      )
+    })}</ul>
+  }  
+  else if (nextList !== null && nextPokemonList === true) {
+    const pokemonNextList = nextList.results
+
+    list = <ul>{pokemonNextList.map(pokemon => { 
+      return (
+        <li onClick={(e) => console.log(e)} key={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
+      )
+    })}</ul>
     
-      list = <PokemonListTwo apiDataTwo={`https://pokeapi.co/api/v2/pokemon-species/?offset=${next}&limit=20`} />
 
       if (next < 880) {
         button = <button onClick={showNextList}>Next</button>
       }
       buttonTwo =  <button onClick={showPrevList}>Prev</button>
-      
-      console.log(next);
-    } else {
+  }
+  else {
       list = <h2>There is no data</h2>
-    }
-
-
-
-
-
+  }
 
 
     return (
       <div>
+        <Search />
         {buttonTwo}
         {button}
         {list}
