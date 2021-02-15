@@ -24,10 +24,6 @@ function Stage(props) {
     }
   }
 
-  console.log(stage1)
-  console.log(stage2)
-  console.log(stage3)
-  
   let evolutionList;
   
   if (stage2 === undefined && stage3 === undefined) {
@@ -37,11 +33,6 @@ function Stage(props) {
   } else { 
     evolutionList = <ul><li><ImageTwo stage={stage1} />{stage1}</li><li><ImageTwo stage={stage2} />{stage2}</li><li><ImageTwo stage={stage3} />{stage3}</li></ul>
   }
-
-
-
-
-
 
 
 

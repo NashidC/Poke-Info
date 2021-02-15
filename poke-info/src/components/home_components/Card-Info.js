@@ -20,14 +20,16 @@ function CardInfo(props) {
     fetchPokemon();
   },[])
 
+  console.log(pokemon)
 
 
   if (pokemon !== undefined) {
     return (
       <div>
-        <h2>Card Info</h2>
+        <h2>#{pokemon.order} {pokemon.name}</h2>
+        <div>
 
-      
+        </div>
         <Evolution pokemonEvolution={pokemon.evolution_chain} />
       </div>
     )

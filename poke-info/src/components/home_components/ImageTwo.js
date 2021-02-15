@@ -9,11 +9,6 @@ function ImageTwo(props) {
 
   
   const [stageEvolution, setStageEvolution] = useState([]);
-  console.log(props.stage)
-
-
-  
-  
   
   const getStage = async () => {
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.stage}`);

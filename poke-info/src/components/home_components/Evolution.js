@@ -23,11 +23,9 @@ function Evolution(props){
   if (evolution !== undefined) {
     return (
       <div>
-        <h3>Evolution</h3>
-        <div>
-          <Stage stages={evolution} />
-        </div>
-      </div>  
+        <h3>Evolution:</h3>
+        <Stage stages={evolution} />
+      </div> 
     )
   } else { 
     return (
