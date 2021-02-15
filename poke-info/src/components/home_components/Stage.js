@@ -31,11 +31,11 @@ function Stage(props) {
   let evolutionList;
   
   if (stage2 === undefined && stage3 === undefined) {
-    evolutionList = <ul><li><ImageTwo />{stage1}</li></ul>
+    evolutionList = <ul><li><ImageTwo stage={stage1} />{stage1}</li></ul>
   } else if (stage3 === undefined) {
-    evolutionList = <ul><li><ImageTwo />{stage1}</li><li><ImageTwo />{stage2}</li></ul>
+    evolutionList = <ul><li><ImageTwo stage={stage1} />{stage1}</li><li><ImageTwo stage={stage2} />{stage2}</li></ul>
   } else { 
-    evolutionList = <ul><li><ImageTwo />{stage1}</li><li><ImageTwo />{stage2}</li><li><ImageTwo />{stage3}</li></ul>
+    evolutionList = <ul><li><ImageTwo stage={stage1} />{stage1}</li><li><ImageTwo stage={stage2} />{stage2}</li><li><ImageTwo stage={stage3} />{stage3}</li></ul>
   }
 
 
