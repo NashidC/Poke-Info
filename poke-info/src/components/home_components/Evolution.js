@@ -1,12 +1,37 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Stage from './Stage';
+
+function Evolution(props){ 
+
+  const [evolution, setEvolution] = useState(undefined);
 
 
 
-function Evolution(){ 
+  const fetchEvolution = async () => { 
+    const response = await axios.get(props.pokemonEvolution.url);
+    setEvolution(response.data)
+  }
+
+  useEffect(() => {
+    fetchEvolution();
+  }, []);
 
 
-  return (
-    <h3>Evolution</h3>
-  )
+
+
+  if (evolution !== undefined) {
+    return (
+      <div>
+        <h3>Evolution:</h3>
+        <Stage stages={evolution} />
+      </div> 
+    )
+  } else { 
+    return (
+      <div></div>
+    )
+  }
 }
 
 

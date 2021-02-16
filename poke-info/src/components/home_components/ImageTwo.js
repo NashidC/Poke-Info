@@ -2,28 +2,34 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 
-function ImageTwo(props) {
-  
 
-  const [pokemonName, setPokemonName] = useState([]);
+
+
+function ImageTwo(props) { 
+
   
-  const getPokemonByName = async () => {
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.imageName}`);
+  const [stageEvolution, setStageEvolution] = useState([]);
   
-    setPokemonName(response.data.sprites.front_default);
+  const getStage = async () => {
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.stage}`);
+    setStageEvolution(response.data.sprites.front_default);
   }
   
+  
   useEffect(() => {
-    getPokemonByName()
+    getStage()
   }, [])
-    
-  
 
-    return (
-      <img src={pokemonName} />
-  
-    )
-  
+
+
+
+  return (
+     <img src={stageEvolution} />
+  )
+
 }
-  
+
+
+
 export default ImageTwo;
+

@@ -23,7 +23,7 @@ useEffect(() => {
   
   
   return (
-    <img src={pokemonName} />
+    <img id={props.imageName} src={pokemonName} />
 
   )
 
