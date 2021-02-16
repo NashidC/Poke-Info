@@ -69,20 +69,28 @@ function PokemonSummary(props) {
       button = <button onClick={showNextList}>Next</button>
       const pokemonsList = pokemons.results
 
-    list = <ul>{pokemonsList.map((pokemon) => { 
+    list = <div className="grid-container">{pokemonsList.map((pokemon) => { 
       return (
-        <li onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
+        <div className="Card">
+          <div className="Card_name">
+            <p onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} /> <br/>{pokemon.name}</p>
+          </div>
+        </div>
       )
-    })}</ul>
+    })}</div>
   }  
   else if (nextList !== null && nextPokemonList === true) {
     const pokemonNextList = nextList.results
 
-    list = <ul>{pokemonNextList.map(pokemon => { 
+    list = <div className="grid-container">{pokemonNextList.map(pokemon => { 
       return (
-        <li onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
+        <div className="Card">
+          <div className="Card_name">
+            <p onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} /> <br/>{pokemon.name}</p>
+          </div>
+        </div>
       )
-    })}</ul>
+    })}</div>
     
 
       if (next < 880) {
@@ -101,7 +109,9 @@ function PokemonSummary(props) {
         <Search />
         {buttonTwo}
         {button}
-        {list}
+      
+          {list}
+          
       </div>
     )
   } else { 
