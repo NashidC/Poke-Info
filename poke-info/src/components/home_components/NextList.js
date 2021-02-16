@@ -2,7 +2,7 @@ import ImageTwo from "./ImageTwo"
 
 
 
-function NextList(props) { 
+function NextList(props) {
 
   console.log(props.nextPokemons)
   let nextPokemons = props.nextPokemons;
@@ -10,13 +10,22 @@ function NextList(props) {
 
 
   return (
-    <div>
-      <ul>
-        {nextPokemons.map((pokemon) => { 
-           return <li key={pokemon.name}><ImageTwo imageName={pokemon.name} />{pokemon.name}</li>
-        })
-        }
-      </ul>
+    <div className="grid-container">
+      {/* <ul> */}
+      {nextPokemons.map((pokemon) => {
+        return (
+          <div className="Card">
+            <div className="Card_name">
+              {/* <li key={pokemon.name}> */}
+              <ImageTwo imageName={pokemon.name} /><br />
+              {pokemon.name}
+              {/* </li> */}
+            </div>
+          </div>
+        )
+      })
+      }
+      {/* </ul> */}
     </div>
   )
 }
