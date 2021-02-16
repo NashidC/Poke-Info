@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
-import Evolution from './Evolution'
-import Moves from './Moves'
+import Evolution from './Evolution';
+import HeighWeight from './HeightWeight';
+import Moves from './Moves';
+import Card from './Card';
 
 function CardInfo(props) {
   
@@ -18,9 +20,9 @@ function CardInfo(props) {
 
   useEffect(() => { 
     fetchPokemon();
-  },[])
-
-
+  }, [])
+  
+  console.log(pokemon);
 
 
   if (pokemon !== undefined) {
@@ -28,10 +30,18 @@ function CardInfo(props) {
       <div>
         <h2>#{pokemon.order} {pokemon.name}</h2>
         <div>
+          <div id="card">
+            <Card card={pokemon.name} />
+          </div>
 
           <div>
-            <h3>Moves</h3>
-            <Moves name={pokemonName} />
+            <div id="heighWeight">
+              <HeighWeight heightWeight={pokemon.name} />
+            </div>
+            <div id="moves">
+              <h3>Moves</h3>
+              <Moves name={pokemonName} />
+            </div>
           </div>
         </div>
         <Evolution pokemonEvolution={pokemon.evolution_chain} />

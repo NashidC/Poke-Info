@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
-
+import Description from './Description';
 
 
 function Moves(props) { 
@@ -23,15 +23,15 @@ function Moves(props) {
   },[])
   
   
-  console.log(move)
-
-  
-  
-  
   if (move !== undefined) {
     return (
       <div>
-        
+        <ul>
+          <li><h4>{move.moves[0].move.name}</h4><Description moveName={move.moves[0].move.url} /></li>
+          <li><h4>{move.moves[1].move.name}</h4><Description moveName={move.moves[1].move.url} /></li>
+          <li><h4>{move.moves[2].move.name}</h4><Description moveName={move.moves[2].move.url} /></li>
+          <li><h4>{move.moves[3].move.name}</h4><Description moveName={move.moves[3].move.url} /></li>
+        </ul>
       </div>
     )
   } else {
