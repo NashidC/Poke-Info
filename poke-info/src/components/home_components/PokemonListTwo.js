@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import NextList from './NextList';
-import Image from "./Image"
 
 function PokemonListTwo(props) {
 
