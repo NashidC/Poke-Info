@@ -1,23 +1,36 @@
 
 
+
 import Image from './Image'
 
 function PokemonList(props) {
 
-  
+
   const pokemons = props.apiData.results
-  
-    return (
-      <div>
-        <ul>
-          {
-            pokemons.map((pokemon, index) => { 
-              return <li key={pokemon.name}><Image imageName={pokemon.name} />{pokemon.name}</li>
-            })
-          }
-        </ul>
-      </div>
-    )
+
+  return (
+
+    // <ul>
+    <div className="grid-container">
+
+      {
+        pokemons.map((pokemon, index) => {
+          return (
+            <div className="Card">
+              <div className="Card_name">
+                {/* <li key={pokemon.name}> */}
+                <Image imageName={pokemon.name} /><br />
+                {pokemon.name}
+                {/* </li> */}
+              </div>
+            </div>
+          )
+        })
+      }
+    </div>
+    // </ul>
+
+  )
 }
 
 
