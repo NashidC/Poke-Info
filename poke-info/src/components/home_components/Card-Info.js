@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
 import Evolution from './Evolution'
-
+import Moves from './Moves'
 
 function CardInfo(props) {
   
@@ -20,7 +20,7 @@ function CardInfo(props) {
     fetchPokemon();
   },[])
 
-  console.log(pokemon)
+
 
 
   if (pokemon !== undefined) {
@@ -29,6 +29,10 @@ function CardInfo(props) {
         <h2>#{pokemon.order} {pokemon.name}</h2>
         <div>
 
+          <div>
+            <h3>Moves</h3>
+            <Moves name={pokemonName} />
+          </div>
         </div>
         <Evolution pokemonEvolution={pokemon.evolution_chain} />
       </div>
