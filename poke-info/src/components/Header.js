@@ -20,10 +20,7 @@ function Header() {
       />
 
 
-      <li><a href="#">Gen I</a></li>
-      <li><a href="#">Gen II</a></li>
-      <li><a href="#">Gen III</a></li>
-      <li><a href="#">Gen IV</a></li>
+
 
     </div>
 
