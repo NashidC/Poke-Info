@@ -46,6 +46,7 @@
   border-radius: 10px;
   flex-direction: row;
   padding: 10px;
+  cursor: pointer;
   
 }
 

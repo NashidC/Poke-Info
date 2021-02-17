@@ -4,6 +4,7 @@ import Evolution from './Evolution';
 import HeighWeight from './HeightWeight';
 import Moves from './Moves';
 import Card from './Card';
+import Damage from './Damage'
 
 function CardInfo(props) {
 
@@ -21,8 +22,11 @@ function CardInfo(props) {
   useEffect(() => {
     fetchPokemon();
   }, [])
+<<<<<<< HEAD
 
   console.log(pokemon);
+=======
+>>>>>>> 2e26348a2d495b8195bc7079e26b63996204ce3d
 
 
   if (pokemon !== undefined) {
@@ -45,6 +49,7 @@ function CardInfo(props) {
           </div>
         </div>
         <Evolution pokemonEvolution={pokemon.evolution_chain} />
+        <Damage pokeName={pokemonName} />
       </div>
     )
   } else {
