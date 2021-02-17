@@ -22,9 +22,7 @@ function Home() {
   
   return (
     <div>
-      <PokemonSummary data={pokemonList} />
-      {/* <div>{JSON.stringify(pokemonList)}</div> */}
-      
+      <PokemonSummary data={pokemonList} />      
     </div>
   )
 }

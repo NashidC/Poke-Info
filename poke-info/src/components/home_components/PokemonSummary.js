@@ -15,6 +15,8 @@ function PokemonSummary(props) {
   const [nextList, setNextList] = useState(null);
   const [cardInfo, setCardInfo] = useState(false);
   const [pokemonName, setPokemonName] = useState("");
+  const [search, setSearch] = useState(false);
+  const [term, setTerm] = useState("")
 
   let url = `https://pokeapi.co/api/v2/pokemon-species/?offset=${next}&limit=20`;
 
@@ -35,6 +37,9 @@ function PokemonSummary(props) {
       clearTimeout(timeoutId);
     }
   }, [next]);
+
+
+
 
 
   function showNextList() {
@@ -59,7 +64,21 @@ function PokemonSummary(props) {
 
   function back() {
     setCardInfo(false);
+    setTerm("");
   }
+
+  function home() {
+    window.location.reload();
+  }
+
+
+
+  function lookForPokemon() {
+    setSearch(true);
+    setCardInfo(true);
+  }
+
+
 
   let list;
   let button;
@@ -106,10 +125,25 @@ function PokemonSummary(props) {
   if (!cardInfo) {
     return (
       <div>
-        <Search />
+        <div className="flex-two">
+          <input
+            type="Search"
+            placeholder="Search"
+            value={term}
+            onChange={e => setTerm(e.target.value)}
+          />
+          <button onClick={lookForPokemon}><i className="fa fa-search"></i></button>
+        </div>
         {buttonTwo}
         {button}
         {list}
+      </div>
+    )
+  } else if (search === true && cardInfo) {
+    return (
+      <div>
+        <button onClick={() => home()}>Back</button>
+        <Search searchPokemon={term} />
       </div>
     )
   } else {
