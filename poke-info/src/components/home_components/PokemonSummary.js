@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-function PokemonSummary(props) { 
+function PokemonSummary(props) {
 
   const pokemons = props.data;
 
@@ -19,7 +19,7 @@ function PokemonSummary(props) {
   let url = `https://pokeapi.co/api/v2/pokemon-species/?offset=${next}&limit=20`;
 
 
-  const fetchNextList= async () => {
+  const fetchNextList = async () => {
     const res = await axios.get(url);
     setNextList(res.data);
   }
@@ -35,9 +35,9 @@ function PokemonSummary(props) {
       clearTimeout(timeoutId);
     }
   }, [next]);
-  
-  
-  function showNextList() { 
+
+
+  function showNextList() {
     setNextPokemonList(true);
     setNext(next + 20);
   }
@@ -46,60 +46,60 @@ function PokemonSummary(props) {
     if (next <= 20) {
       setNext(0)
       setNextPokemonList(false);
-    } else { 
+    } else {
       setNext(next - 20)
     }
   }
 
 
-  function goToCardInfo(e) { 
-      setPokemonName(e.target.id);
-      setCardInfo(true);
+  function goToCardInfo(e) {
+    setPokemonName(e.target.id);
+    setCardInfo(true);
   }
 
-  function back() { 
+  function back() {
     setCardInfo(false);
   }
 
   let list;
   let button;
   let buttonTwo;
-  
-  if (pokemons !== null && nextPokemonList === false) {
-      button = <button onClick={showNextList}>Next</button>
-      const pokemonsList = pokemons.results
 
-    list = <div className="grid-container">{pokemonsList.map((pokemon) => { 
+  if (pokemons !== null && nextPokemonList === false) {
+    button = <button onClick={showNextList}>Next</button>
+    const pokemonsList = pokemons.results
+
+    list = <div className="grid-container">{pokemonsList.map((pokemon) => {
       return (
         <div className="Card">
           <div className="Card_name">
-            <p onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} /> <br/>{pokemon.name}</p>
+            <p onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} /> <br />{pokemon.name}</p>
           </div>
         </div>
       )
     })}</div>
-  }  
+  }
   else if (nextList !== null && nextPokemonList === true) {
     const pokemonNextList = nextList.results
 
-    list = <div className="grid-container">{pokemonNextList.map(pokemon => { 
+    list = <div className="grid-container">{pokemonNextList.map(pokemon => {
       return (
         <div className="Card">
           <div className="Card_name">
-            <p onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} /> <br/>{pokemon.name}</p>
+            <p onClick={(e) => goToCardInfo(e)} key={pokemon.name} id={pokemon.name}><Image imageName={pokemon.name} /> <br />{pokemon.name}</p>
           </div>
         </div>
       )
     })}</div>
-    
 
-      if (next < 880) {
-        button = <button onClick={showNextList}>Next</button>
-      }
-      buttonTwo =  <button onClick={showPrevList}>Prev</button>
+
+    if (next < 880) {
+      button = <button onClick={showNextList}>Next</button>
+    }
+    buttonTwo = <button onClick={showPrevList}>Prev</button>
   }
   else {
-      list = <h2>There is no data</h2>
+    list = <h2>There is no data</h2>
   }
 
 
@@ -109,20 +109,20 @@ function PokemonSummary(props) {
         <Search />
         {buttonTwo}
         {button}
-      
-          {list}
-          
+
+        {list}
+
       </div>
     )
-  } else { 
+  } else {
     return (
       <div>
-        <button onClick={ () => back() }>Back</button>
+        <button onClick={() => back()}>Back</button>
         <CardInfo pokemonName={pokemonName} />
       </div>
     )
   }
-    
+
 }
 
 

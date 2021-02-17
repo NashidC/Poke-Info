@@ -6,7 +6,7 @@ import Moves from './Moves';
 import Card from './Card';
 
 function CardInfo(props) {
-  
+
   const [pokemon, setPokemon] = useState(undefined);
 
   let pokemonName = props.pokemonName
@@ -18,10 +18,10 @@ function CardInfo(props) {
     setPokemon(response.data)
   }
 
-  useEffect(() => { 
+  useEffect(() => {
     fetchPokemon();
   }, [])
-  
+
   console.log(pokemon);
 
 

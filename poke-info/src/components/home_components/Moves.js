@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Description from './Description';
 
 
-function Moves(props) { 
+function Moves(props) {
 
   const [move, setMove] = useState(undefined);
 
@@ -18,20 +18,20 @@ function Moves(props) {
     setMove(response.data)
   }
 
-  useEffect(() => { 
+  useEffect(() => {
     fetchMove();
-  },[])
-  
-  
+  }, [])
+
+
   if (move !== undefined) {
     return (
       <div>
-        <ul>
-          <li><h4>{move.moves[0].move.name}</h4><Description moveName={move.moves[0].move.url} /></li>
-          <li><h4>{move.moves[1].move.name}</h4><Description moveName={move.moves[1].move.url} /></li>
-          <li><h4>{move.moves[2].move.name}</h4><Description moveName={move.moves[2].move.url} /></li>
-          <li><h4>{move.moves[3].move.name}</h4><Description moveName={move.moves[3].move.url} /></li>
-        </ul>
+
+        <h4>{move.moves[0].move.name}</h4><Description moveName={move.moves[0].move.url} />
+        <h4>{move.moves[1].move.name}</h4><Description moveName={move.moves[1].move.url} />
+        <h4>{move.moves[2].move.name}</h4><Description moveName={move.moves[2].move.url} />
+        <h4>{move.moves[3].move.name}</h4><Description moveName={move.moves[3].move.url} />
+
       </div>
     )
   } else {
