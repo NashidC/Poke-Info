@@ -60,7 +60,7 @@ function Search(props) {
     )
   } else {
     return (
-      <div><h2>{errorMessage}</h2></div>
+      <div id="errorMessg"><h2>{errorMessage}</h2></div>
     )
   }
 }

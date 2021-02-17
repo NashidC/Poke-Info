@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-bottom: 5%;
 }
 
 
@@ -9,9 +10,8 @@
 
 #nav {
   width: 100%;
- 
   margin: 0 0 3em 0;
-  padding: 0;
+  padding: 2% 0;
   list-style: none;
   background-color: #B71E1E;
   /* border-bottom: 1px solid #ccc; 
@@ -35,7 +35,13 @@
   border-radius: 10px;
   flex-direction: row;
   padding: 10px;
-  
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.Card:hover {
+  transform: scale(1.01);
+	box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.2);
 }
 
 .Card_name {
@@ -51,6 +57,7 @@
   margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
+  margin-top: 2%;
 }
 
 table {
@@ -67,6 +74,53 @@ td {
 
 .type-text p{
   color: white;
+}
+
+#search {
+  border-radius: 1%;
+  outline: none;
+  border: black solid 1px;
+  font-size: 1.4rem;
+  padding-left: 1%;
+  padding: 0.3%;
+}
+
+#searchButton {
+  border-radius: 50%;
+  font-size: 1.4rem;
+  background: white;
+  border: white;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  color: #017048;
+}
+
+.navButton {
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  padding: 1% 2%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border: black 2px solid;
+  margin-top: 3%;
+}
+
+.navButton:hover {
+  color: #017048;
+  background-color: white;
+  border: black 2px solid;
+}
+
+#next {
+  margin-left: 1.5%;
+}
+
+#prev {
+  margin-right: 1.5%;
 }
 
 
@@ -361,3 +415,14 @@ td {
   align-items: 'center';
   justify-items: 'center';
 }
+
+
+#errorMessg{
+    margin-top: 20%;
+    border: #B71E1E solid 4px;
+    border-radius: 17px;
+    width: 89%;
+    padding: 3% 4%;
+    margin: 12% auto;
+    justify-content: center;
+  }
