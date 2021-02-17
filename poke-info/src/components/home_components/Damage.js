@@ -16,8 +16,6 @@ function Damage(props) {
   useEffect(() => { 
     fetchPokemon();
   }, [])
-
-  console.log(pokemon)
   
   
   if (pokemon !== undefined) {

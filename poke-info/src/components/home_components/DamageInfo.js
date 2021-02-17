@@ -13,8 +13,6 @@ function DamageInfo(props) {
     setDamage(response.data)
   }
 
-  console.log(damage)
-
   useEffect(() => { 
     fetchDamage();
   }, [])
