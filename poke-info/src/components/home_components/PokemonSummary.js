@@ -40,8 +40,6 @@ function PokemonSummary(props) {
 
 
 
-
-
   function showNextList() {
     setNextPokemonList(true);
     setNext(next + 20);
@@ -85,7 +83,7 @@ function PokemonSummary(props) {
   let buttonTwo;
 
   if (pokemons !== null && nextPokemonList === false) {
-    button = <button onClick={showNextList}>Next</button>
+    button = <button className="navButton" onClick={showNextList}>Next</button>
     const pokemonsList = pokemons.results
 
     list = <div className="grid-container">{pokemonsList.map((pokemon) => {
@@ -113,9 +111,9 @@ function PokemonSummary(props) {
 
 
     if (next < 880) {
-      button = <button onClick={showNextList}>Next</button>
+      button = <button className="navButton" id="next" onClick={showNextList}>Next</button>
     }
-    buttonTwo = <button onClick={showPrevList}>Prev</button>
+    buttonTwo = <button className="navButton" id="prev" onClick={showPrevList}>Prev</button>
   }
   else {
     list = <h2>There is no data</h2>
@@ -131,8 +129,9 @@ function PokemonSummary(props) {
             placeholder="Search"
             value={term}
             onChange={e => setTerm(e.target.value)}
+            id="search"
           />
-          <button onClick={lookForPokemon}><i className="fa fa-search"></i></button>
+          <button onClick={lookForPokemon} id="searchButton"><i className="fa fa-search"></i></button>
         </div>
         {buttonTwo}
         {button}
@@ -142,14 +141,14 @@ function PokemonSummary(props) {
   } else if (search === true && cardInfo) {
     return (
       <div>
-        <button onClick={() => home()}>Back</button>
+        <button className="navButton" onClick={() => home()}>Back</button>
         <Search searchPokemon={term} />
       </div>
     )
   } else {
     return (
       <div>
-        <button onClick={() => back()}>Back</button>
+        <button className="navButton" onClick={() => back()}>Back</button>
         <CardInfo pokemonName={pokemonName} />
       </div>
     )
