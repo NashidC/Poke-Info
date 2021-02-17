@@ -4,10 +4,12 @@ import Evolution from './Evolution';
 import HeighWeight from './HeightWeight';
 import Moves from './Moves';
 import Card from './Card';
-import Damage from './Damage'
+import Damage from './Damage';
 
 function CardInfo(props) {
   
+  console.log(props);
+
   const [pokemon, setPokemon] = useState(undefined);
 
   let pokemonName = props.pokemonName
