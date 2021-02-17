@@ -36,7 +36,7 @@ function PokemonSummary(props) {
     }
   }, [next]);
   
-  
+
   function showNextList() { 
     setNextPokemonList(true);
     setNext(next + 20);
@@ -109,9 +109,7 @@ function PokemonSummary(props) {
         <Search />
         {buttonTwo}
         {button}
-      
-          {list}
-          
+        {list}  
       </div>
     )
   } else { 

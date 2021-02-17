@@ -22,7 +22,6 @@ function Home() {
   
   return (
     <div>
-      <h1>Home</h1>
       <PokemonSummary data={pokemonList} />
       {/* <div>{JSON.stringify(pokemonList)}</div> */}
       
