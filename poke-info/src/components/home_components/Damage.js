@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import DamageInfo from "./DamageInfo";
 
 
-function Damage(props) { 
+function Damage(props) {
   const [pokemon, setPokemon] = useState(undefined)
 
   let url = `https://pokeapi.co/api/v2/pokemon/${props.pokeName}/`
@@ -13,23 +13,23 @@ function Damage(props) {
     setPokemon(response.data)
   }
 
-  useEffect(() => { 
+  useEffect(() => {
     fetchPokemon();
   }, [])
-  
-  
+
+
   if (pokemon !== undefined) {
     return (
       <div>
         <h3>Damage Relations</h3>
-        {pokemon.types.map(type => { 
-            return (
-              <div key={type.type.name}>
-                <h4>{type.type.name}</h4>
-                <DamageInfo type={type.type.name} />
-              </div>
-            )
-          })}
+        {pokemon.types.map(type => {
+          return (
+            <div key={type.type.name}>
+              <h4>{type.type.name}</h4>
+              <DamageInfo type={type.type.name} />
+            </div>
+          )
+        })}
       </div>
     )
   } else {

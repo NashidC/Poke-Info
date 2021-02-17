@@ -40,6 +40,7 @@ function CardInfo(props) {
           </div>
         </div>
         <Evolution pokemonEvolution={pokemon.evolution_chain} />
+        <br />
         <Damage pokeName={pokemonName} />
       </div>
     )
