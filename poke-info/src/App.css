@@ -72,9 +72,6 @@ td {
   text-align: center;
 }
 
-.type-text p{
-  color: white;
-}
 
 #search {
   border-radius: 1%;
@@ -142,11 +139,23 @@ td {
   margin: 0px 5px;
 } */
 .value {
-  width: 70px;
+  width: 100px;
 }
 
 .height-weight {
   font-weight: bold;
+}
+
+.damage-type {
+  width: 200px;
+}
+.damage-value p{
+  width:75px;
+  height: 5px;
+}
+.damage-value {
+  display: flex;
+  
 }
 
 .move-name {
@@ -256,7 +265,7 @@ td {
   justify-items: 'center';
 }
 .normal-block{
-  color: white;
+  color: black;
   background: #dedede;
   
   align-items: center;

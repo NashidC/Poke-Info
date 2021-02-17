@@ -28,9 +28,9 @@ function DamageInfo(props) {
         <table border={1}>
           <tbody>
 
-            <tr><td>
+            <tr><td className="damage-type">
               <p>Double Damage From</p> </td>
-              <td> {damage.damage_relations.double_damage_from.map(damage => {
+              <td className="damage-value" > {damage.damage_relations.double_damage_from.map(damage => {
 
                 if (damage.name === 'grass') {
                   return (
@@ -148,9 +148,9 @@ function DamageInfo(props) {
               )}
               </td> </tr>
 
-            <tr><td>
+            <tr><td className="damage-type">
               <p>Double Damage To</p></td>
-              <td>  {damage.damage_relations.double_damage_to.map(damage => {
+              <td className="damage-value">  {damage.damage_relations.double_damage_to.map(damage => {
                 if (damage.name === 'grass') {
                   return (
                     <div className="grass-block" key={'grass'}>
@@ -267,9 +267,9 @@ function DamageInfo(props) {
               })}
               </td> </tr>
 
-            <tr><td>
+            <tr><td className="damage-type">
               <p>Half Damage From</p></td>
-              <td>  {damage.damage_relations.half_damage_from.map(damage => {
+              <td className="damage-value">  {damage.damage_relations.half_damage_from.map(damage => {
                 if (damage.name === 'grass') {
                   return (
                     <div className="grass-block" key={'grass'}>
@@ -386,9 +386,9 @@ function DamageInfo(props) {
               })}
               </td> </tr>
 
-            <tr><td>
+            <tr><td className="damage-type">
               <p>Half Damage To</p></td>
-              <td> {damage.damage_relations.half_damage_to.map(damage => {
+              <td className="damage-value"> {damage.damage_relations.half_damage_to.map(damage => {
                 if (damage.name === 'grass') {
                   return (
                     <div className="grass-block" key={'grass'}>
