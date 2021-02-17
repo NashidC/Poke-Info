@@ -415,3 +415,14 @@ td {
   align-items: 'center';
   justify-items: 'center';
 }
+
+
+#errorMessg{
+    margin-top: 20%;
+    border: #B71E1E solid 4px;
+    border-radius: 17px;
+    width: 89%;
+    padding: 3% 4%;
+    margin: 12% auto;
+    justify-content: center;
+  }
