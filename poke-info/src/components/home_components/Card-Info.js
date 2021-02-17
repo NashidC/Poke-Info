@@ -5,43 +5,30 @@ import HeighWeight from './HeightWeight';
 import Moves from './Moves';
 import Card from './Card';
 import Damage from './Damage'
-
 function CardInfo(props) {
-
   const [pokemon, setPokemon] = useState(undefined);
-
   let pokemonName = props.pokemonName
-
   let url = `https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`;
-
   const fetchPokemon = async () => {
     const response = await axios.get(url);
     setPokemon(response.data)
   }
-
   useEffect(() => {
     fetchPokemon();
   }, [])
-<<<<<<< HEAD
-
-  console.log(pokemon);
-=======
->>>>>>> 2e26348a2d495b8195bc7079e26b63996204ce3d
-
-
   if (pokemon !== undefined) {
     return (
       <div>
         <h2>#{pokemon.order} {pokemon.name}</h2>
         <div>
           <div id="card">
+            <HeighWeight heightWeight={pokemon.name} />
             <Card card={pokemon.name} />
           </div>
-
           <div>
-            <div id="heighWeight">
-              <HeighWeight heightWeight={pokemon.name} />
-            </div>
+            {/* <div id="heighWeight">
+              
+            </div> */}
             <div id="moves">
               <h3>Moves</h3>
               <Moves name={pokemonName} />
@@ -58,6 +45,4 @@ function CardInfo(props) {
     )
   }
 }
-
-
 export default CardInfo;

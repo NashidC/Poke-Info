@@ -26,13 +26,16 @@ function Moves(props) {
   if (move !== undefined) {
     return (
       <div>
+        <table border={1}>
+          <tbody>
 
-        <h4>{move.moves[0].move.name}</h4><Description moveName={move.moves[0].move.url} />
-        <h4>{move.moves[1].move.name}</h4><Description moveName={move.moves[1].move.url} />
-        <h4>{move.moves[2].move.name}</h4><Description moveName={move.moves[2].move.url} />
-        <h4>{move.moves[3].move.name}</h4><Description moveName={move.moves[3].move.url} />
-
-      </div>
+            <tr><td className='move-name'><h4>{move.moves[0].move.name}</h4></td> <td className='move-value'><Description moveName={move.moves[0].move.url} /></td></tr>
+            <tr><td className='move-name'><h4>{move.moves[1].move.name}</h4></td> <td className='move-value'><Description moveName={move.moves[1].move.url} /></td></tr>
+            <tr><td className='move-name'><h4>{move.moves[2].move.name}</h4></td> <td className='move-value'><Description moveName={move.moves[2].move.url} /></td></tr>
+            <tr><td className='move-name'><h4>{move.moves[3].move.name}</h4></td> <td className='move-value'><Description moveName={move.moves[3].move.url} /></td></tr>
+          </tbody>
+        </table >
+      </div >
     )
   } else {
     return (

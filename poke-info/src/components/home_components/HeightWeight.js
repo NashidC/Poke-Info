@@ -25,8 +25,8 @@ function HeightWeight(props) {
   if (scale !== undefined) {
     return (
       <div>
-        <p>{"Height: " + scale.height / 10 + "m"}</p>
-        <p>{"Weight: " + scale.weight / 10 + "kg"}</p>
+        <p className="height-weight">{"Height: " + scale.height / 10 + "m "}<br />{"    Weight: " + scale.weight / 10 + "kg"}</p>
+        <p></p>
       </div>
     )
   } else {

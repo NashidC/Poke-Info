@@ -35,15 +35,9 @@ function PokemonSummary(props) {
       clearTimeout(timeoutId);
     }
   }, [next]);
-<<<<<<< HEAD
 
 
   function showNextList() {
-=======
-  
-
-  function showNextList() { 
->>>>>>> 2e26348a2d495b8195bc7079e26b63996204ce3d
     setNextPokemonList(true);
     setNext(next + 20);
   }
@@ -115,13 +109,7 @@ function PokemonSummary(props) {
         <Search />
         {buttonTwo}
         {button}
-<<<<<<< HEAD
-
         {list}
-
-=======
-        {list}  
->>>>>>> 2e26348a2d495b8195bc7079e26b63996204ce3d
       </div>
     )
   } else {
