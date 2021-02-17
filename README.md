@@ -28,7 +28,7 @@ Mobile Bulbasaur Card <br>
 <img src="Mobile Bulbasaur.png"/>
 
 ## Component Hierarchy
-<img src=Component_Hierarchy.png/>
+<img src="Hierarchy.png"/>
 
 ## API Used
 
