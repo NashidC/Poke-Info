@@ -3,8 +3,8 @@ import axios from 'axios';
 
 
 
-function HeightWeight(props) { 
-  
+function HeightWeight(props) {
+
   const [scale, setScale] = useState(undefined);
 
 
@@ -16,24 +16,24 @@ function HeightWeight(props) {
     setScale(response.data)
   }
 
-  useEffect(() => { 
+  useEffect(() => {
     fetchScale();
-  },[])
-  
+  }, [])
 
 
-if (scale !== undefined) {
-  return (
-    <div>
-      <p>{scale.height/10 + "m"}</p>
-      <p>{scale.weight/10 + "kg"}</p>
-    </div>
-  )
-} else {
-  return (
-    <div></div>
-  )
-}
+
+  if (scale !== undefined) {
+    return (
+      <div>
+        <p className="height-weight">{"Height: " + scale.height / 10 + "m "}<br />{"    Weight: " + scale.weight / 10 + "kg"}</p>
+        <p></p>
+      </div>
+    )
+  } else {
+    return (
+      <div></div>
+    )
+  }
 }
 
 
